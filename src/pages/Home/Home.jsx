@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import "./Home.css"
 import { bringAllCharacters } from '../../services/apiCalls';
 import { Counter } from '../../common/Counter/Counter';
+import { Col, Container, Row } from 'react-bootstrap';
 
 export const Home = () => {
 
@@ -58,19 +59,23 @@ export const Home = () => {
 
                 characters.length > 0 
 
-                ? (<div>
+                ? (<Container>
+                    <Row>
                     {
                         characters.map(
                             character => {
                                 return (
-                                    <div key={character.id}>
+                                    <Col 
+                                        sm={12} md={6} lg={4} xl={3} xxl={2}
+                                        key={character.id}
+                                    >
                                         {character.name}
-                                    </div>
+                                    </Col>
                                 )
                             }
                         )
                     }
-                    <Counter 
+                    {/* <Counter 
                         interval={5}
                         start={10}
                     />
@@ -81,8 +86,9 @@ export const Home = () => {
                     <Counter 
                         interval={100}
                         start={100000}
-                    />
-                </div>)
+                    /> */}
+                    </Row>
+                </Container>)
 
                 : (<div>Los datos estan viniendo de la API</div>)
             }
