@@ -16,6 +16,6 @@ export const loginMe = async (body) => {
 
 export const bringMovies = async (criteria) => {
 
-    return await axios.get(`${ROOT_API_TMDB}search/movie?query=${criteria}&include_adult=false&language=en-US&page=4&api_key=${API_KEY_TMDB}`)
+    return await axios.get(`${ROOT_API_TMDB}search/movie?query=${criteria}&include_adult=false&language=en-US&page=1&api_key=${API_KEY_TMDB}`)
 
 }
