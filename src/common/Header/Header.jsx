@@ -46,6 +46,7 @@ export const Header = () => {
       )}
 
       <ButtonNav destination={"/"} name={"Home"} />
+      <ButtonNav destination={"/idiomas"} name={"Idiomas"} />
 
       <ButtonNav destination={"/films"} name={"Films"} />
       {token !== "" ? (

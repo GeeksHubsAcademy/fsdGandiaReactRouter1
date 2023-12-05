@@ -5,6 +5,7 @@ import { Register } from '../Register/Register'
 import { Profile } from '../Profile/Profile'
 import { Login } from '../Login/Login'
 import { Films } from '../Films/Films'
+import { Idiomas } from '../Idiomas/Idiomas'
 
 export const Body = () => {
 
@@ -17,6 +18,7 @@ export const Body = () => {
                 <Route path="/register" element={<Register />}/>
                 <Route path="/login" element={<Login/>} />
                 <Route path="/profile" element={<Profile />}/>
+                <Route path="/idiomas" element={<Idiomas />}/>
             </Routes>
         </>
     )
